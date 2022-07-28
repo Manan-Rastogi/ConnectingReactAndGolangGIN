@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <script>
+        function myFunc() {
+
+        var myHeaders = new Headers();
+        myHeaders.append("cookies", "0k78bpq7skfg7lgqbi4m0hffd7");
+        myHeaders.append("Content-Type", "application/json");
+              
+       
+        fetch("http://localhost:8009/sum", {
+            method: 'POST',
+            headers: myHeaders,
+            // body: raw,
+            redirect: 'follow'
+        })
+        .then(response => response.text())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
+            }
+            </script>
+            <button onclick="myFunc()">Test</button>
+        </body>
+</html>
